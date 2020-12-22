@@ -22,6 +22,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import SettingsScreen from './components/SettingsScreen.js';
 import PastReceiptsScreen from './components/PastReceiptsScreen.js';
 import HomeScreen from './components/HomeScreen.js';
+import AddIngredients from './components/AddIngredients.js';
 
 import {
   Header,
@@ -45,10 +46,12 @@ const App = () => {
               iconName = focused
                 ? 'ios-information-circle'
                 : 'ios-information-circle-outline';
-            } else if (route.name === 'PastReceipts') {
+            } else if (route.name === 'Add') {
+              iconName = focused ? 'ios-add-circle' : 'ios-add-circle-outline';
+            } else if (route.name === 'Receipts') {
               iconName = focused ? 'ios-list' : 'ios-list-outline';
             } else if (route.name === 'Settings') {
-              iconName = focused ? 'ios-list' : 'ios-list-outline';
+              iconName = focused ? 'ios-cog' : 'ios-cog-outline'; // filled cog doesnt work
             }
 
             // You can return any component that you like here!
@@ -60,7 +63,8 @@ const App = () => {
           inactiveTintColor: 'gray',
         }}>
         <Tab.Screen name="Home" component={HomeScreen}></Tab.Screen>
-        <Tab.Screen name="PastReceipts" component={PastReceiptsScreen}></Tab.Screen>
+        <Tab.Screen name="Add" component={AddIngredients}></Tab.Screen>
+        <Tab.Screen name="Receipts" component={PastReceiptsScreen}></Tab.Screen>
         <Tab.Screen name="Settings" component={SettingsScreen}></Tab.Screen>
       </Tab.Navigator>
     </NavigationContainer>
