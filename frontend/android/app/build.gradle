@@ -132,6 +132,8 @@ android {
         applicationId "com.ichef"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
+        //react-native-camera
+        missingDimensionStrategy 'react-native-camera', 'general'
         versionCode 1
         versionName "1.0"
     }

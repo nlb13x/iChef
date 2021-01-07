@@ -8,10 +8,10 @@ import {
   StatusBar,
 } from 'react-native';
 
-const AddIngredients = () => {
+const HomeScreen = () => {
   return (
     <View style={styles.container}>
-      <Text> Add ingredient page</Text>
+      <Text> Add ingredients to your kitchen!</Text>
     </View>
   );
 };
@@ -25,4 +25,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AddIngredients;
+export default HomeScreen;
