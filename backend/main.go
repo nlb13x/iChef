@@ -1,14 +1,16 @@
+// PREPROCESSING // adopt adaptive
 package main
 
 import (
-	"github.com/gorilla/mux"
+	"gocv.io/x/gocv"
 )
 
 func main() {
-	// Init router
-	r := mux.NewRouter()
+	window := gocv.NewWindow("Receipt")
 
-	// Router handlers / Endpoints for API
+	img := gocv.IMRead("/Use/nipunlamba/iCHEF/assets/IMG_2763.jpg", 0)
+	gocv.Threshold(img, &img, 210, 255, gocv.ThresholdBinary)
+	window.IMShow(img)
+	window.WaitKey(5000)
 
-	r.HandleFunc("/")
 }
