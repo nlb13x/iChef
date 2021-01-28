@@ -1,0 +1,6 @@
+module Pods_iChef_iChefTests {
+  umbrella header "Pods-iChef-iChefTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
